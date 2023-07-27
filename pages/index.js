@@ -19,7 +19,7 @@ export default function HomePage() {
   return (
     <Container>
       <Card style={{ width: '18rem' }}>
-      <Card.Title>Develop. Previews. Ship. 🚀</Card.Title>
+      <Card.Title>Develop. Previews. Test. Ship. 🚀</Card.Title>
           <Card.Body>
             <ListGroup>
                 {names.map((name) => (
