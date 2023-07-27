@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Container, ListGroup } from 'react-bootstrap';
+import { Carousel, Container, ListGroup } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -25,18 +25,24 @@ export default function HomePage(loggedInUser, loggedoutUser) {
 
     return (
       <Container>
-        <Card style={{ width: '18rem' }}>
-        <Card.Title>Develop. Previews. Ship. 🚀</Card.Title>
-            <Card.Body>
-              <ListGroup>
-                  {names.map((name) => (
-                    <ListGroup.Item key={name}>{name}</ListGroup.Item>
-                  ))}
-              </ListGroup>
-            </Card.Body>
-          <Button variant ="primary" onClick={handleClick}>Like ({likes})</Button>
-        </Card>  
-      </Container>  
+        <Carousel>
+          <Carousel.Item>
+            <Button variant="primary"> </Button>
+            <Button variant="secondary"> </Button>
+            <Button variant="success"> </Button>
+            
+        
+          </Carousel.Item>
+          <Carousel.Item>
+            <Button variant="primary"> </Button>
+          </Carousel.Item>
+          <Carousel.Item>
+            <Button variant="secondary"> </Button>
+            <Button variant="success"> </Button>
+            <Button variant="primary"> </Button>
+          </Carousel.Item>
+        </Carousel>
+      </Container>
     );
   };
 };
